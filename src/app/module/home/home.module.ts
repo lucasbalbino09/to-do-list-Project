@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 // Componentes
 import { HeaderComponent } from './components/header/header.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 import { TodoButtonDeleteAllComponent } from './components/todo-button-delete-all/todo-button-delete-all.component';
 import { TodoInputAddItensComponent } from './components/todo-input-add-itens/todo-input-add-itens.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
@@ -15,10 +17,12 @@ import { HomeComponent } from './pages/home/home.component';
     TodoButtonDeleteAllComponent,
     TodoInputAddItensComponent,
     TodoListComponent,
-    HomeComponent
+    HomeComponent    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class HomeModule { }
