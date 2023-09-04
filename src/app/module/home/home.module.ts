@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Componentes
+import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -22,7 +23,8 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     CommonModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

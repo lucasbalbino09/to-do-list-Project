@@ -1,26 +1,15 @@
 
-<section>
-    <ul>
-        <li>
-            <input type="checkbox">
-            <input type="text">
+<section [ngClass]="{'loading': !listaCompleta.length}">
+    <ul *ngIf="listaCompleta.length">
+        <li *ngFor="let itensLista of listaCompleta; let position = index">
+            <input type="checkbox" [(ngModel)]="itensLista.checked">
+            <input type="text" [(ngModel)]="itensLista.task">
 
             <button>
                 <img src="assets/icons/icon-trash.svg" alt="imagem Ilustrativa.">
             </button>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <input type="checkbox">
-            <input type="text" class="checked">
-
-            <button>
-                <img src="assets/icons/icon-trash.svg" alt="imagem Ilustrativa.">
-            </button>
-        </li>
-    </ul>
-    
+        </li>        
+    </ul>    
 </section>
 <app-todo-input-add-itens></app-todo-input-add-itens>
 <app-todo-button-delete-all></app-todo-button-delete-all>
